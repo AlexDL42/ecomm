@@ -63,6 +63,7 @@ class SignUp extends React.Component {
                     <FormInput
                         type='text'
                         name='displayName'
+                        autoComplete='username'
                         value={displayName}
                         onChange={this.handleChange}
                         label='Display Name'
@@ -72,6 +73,7 @@ class SignUp extends React.Component {
                     <FormInput
                         type='email'
                         name='email'
+                        autoComplete='email'
                         value={email}
                         onChange={this.handleChange}
                         label='Email'
