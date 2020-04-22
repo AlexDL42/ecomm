@@ -30,7 +30,17 @@ class SignIn extends React.Component {
                 password: ''
             })
         } catch(err) {
-            console.log(err);
+            switch(err.code){
+                case 'auth/wrong-password':
+                    alert('Sign-in error: unvalid password.');
+                    break;
+                case 'auth/user-not-found':
+                    alert('Sign-in error: user does not exist.');
+                    break;
+                default:
+                    console.log(err);
+            }
+            
         }
 
 
